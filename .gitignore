@@ -1,0 +1,20 @@
+# Dependências
+node_modules/
+
+# Variáveis de ambiente
+.env
+.env.local
+
+# Saída de build
+backend/dist/
+frontend/dist/
+frontend/.angular/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores e ferramentas locais
+.idea/
+.vscode/
+*.swp

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- quadrado azul-escuro de canto reto -->
+  <rect width="32" height="32" rx="5" fill="#1E3A8A"/>
+  <!-- tres barras crescentes: o comparativo mensal do painel -->
+  <rect x="7"  y="17" width="4" height="8"  rx="1" fill="#93C5FD"/>
+  <rect x="14" y="12" width="4" height="13" rx="1" fill="#BFDBFE"/>
+  <rect x="21" y="7"  width="4" height="18" rx="1" fill="#FFFFFF"/>
+</svg>
