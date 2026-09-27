@@ -312,17 +312,15 @@ O documento da disciplina está em
 
 ## Decisões de implementação
 
-A interface partiu do meu app pessoal de finanças
-([App-Financeiro-Capital](https://github.com/MathTrajan/App-Financeiro-Capital),
-NestJS + Prisma), reescrita aqui sobre uma API em Express com SQL puro, que é o
-que a disciplina pede. As telas e os componentes foram preservados; o que mudou
-foi a camada de comunicação e o escopo:
+As escolhas que não se explicam sozinhas lendo o código, e o motivo de cada uma:
 
 | Decisão | Motivo |
 |---|---|
 | Datas trafegam como texto `AAAA-MM-DD` | A API não usa instantes. `new Date('2026-08-15')` é lido em UTC e exibiria 14/08 no horário de Brasília |
 | Chave de cache com o mês em texto | Some a conversão entre o mês do servidor e a chave local |
 | SQL parametrizado, sem ORM | Requisito da disciplina, e deixa o plano de execução visível |
-| Bloco de código de acesso no perfil | O RF04 não tinha interface em lugar nenhum, e sem ela o código nunca poderia ser definido |
-| Mensagem de bloqueio na tela de acesso | A API informa o tempo de espera após tentativas sucessivas (RF03), e o usuário precisa vê-lo |
-| Biometria e aplicativo instalável removidos | Fora do escopo, registrados como evolução futura no documento |
+| Restrições de integridade no banco, não só na aplicação | Regra que vive só no código é burlada por qualquer acesso direto ao banco |
+| Teste de integração contra PostgreSQL real, sem mock | É o mesmo motor da produção: erro de SQL aparece na suíte, e não depois |
+| Código de acesso configurável na tela de perfil | O RF04 exige que o código possa ser definido, e não havia tela para isso |
+| Tempo de espera exibido na tela de acesso | A API informa a espera após tentativas sucessivas (RF03), e o usuário precisa vê-la |
+| Biometria e aplicativo instalável fora do escopo | Registrados como evolução futura no documento da disciplina |
