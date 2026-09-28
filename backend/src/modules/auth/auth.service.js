@@ -21,8 +21,8 @@ const bcrypt = require('bcryptjs');
 const repositorio = require('./auth.repository');
 const { UnauthorizedError, ValidationError } = require('../../shared/errors');
 
-const COOKIE_SESSAO = 'capital_sessao';
-const COOKIE_DESTRAVADO = 'capital_destravado';
+const COOKIE_SESSAO = 'gestfin_sessao';
+const COOKIE_DESTRAVADO = 'gestfin_destravado';
 const CUSTO_BCRYPT = 10;
 
 /**
@@ -92,7 +92,7 @@ async function definirCodigo(householdId, codigo) {
  * sessões destravadas em outros aparelhos deixam de valer.
  */
 function tokenDeDestravamento(pinHash) {
-  return crypto.createHash('sha256').update(`capital-destravado:${pinHash}`).digest('hex');
+  return crypto.createHash('sha256').update(`gestfin-destravado:${pinHash}`).digest('hex');
 }
 
 function destravamentoValido(tokenRecebido, pinHash) {

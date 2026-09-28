@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 
-const KEY = 'capital_tema';
+const KEY = 'gestfin_tema';
 type Theme = 'light' | 'dark';
 
 // Alterna tema claro/escuro. Respeita escolha salva; senão segue o sistema.

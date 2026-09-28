@@ -2,7 +2,7 @@ import { Injectable, signal, computed } from '@angular/core';
 import { Subject } from 'rxjs';
 import { startOfMonth, addMonths, toApiDate } from '../shared/format';
 
-const KEY = 'capital_mes_selecionado';
+const KEY = 'gestfin_mes_selecionado';
 
 /**
  * Mês exibido, compartilhado por todas as telas.

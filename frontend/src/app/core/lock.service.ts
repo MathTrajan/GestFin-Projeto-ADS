@@ -2,7 +2,7 @@ import { Injectable, inject, signal } from '@angular/core';
 import { ApiService } from './api.service';
 import { firstValueFrom } from 'rxjs';
 
-const KEY = 'capital_destravado';
+const KEY = 'gestfin_destravado';
 
 export interface ResultadoDestravamento {
   ok: boolean;

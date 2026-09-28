@@ -1,5 +1,5 @@
 {
-  "name": "capital-backend",
+  "name": "gestfin-backend",
   "version": "1.0.0",
   "description": "API REST do GestFin, sistema de gestão financeira doméstica",
   "private": true,

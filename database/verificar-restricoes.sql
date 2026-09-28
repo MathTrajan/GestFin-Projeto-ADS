@@ -8,7 +8,7 @@
 -- Cobre os casos CTI31 e CTI32 do plano de testes, além das demais restrições.
 --
 -- Uso:
---   psql -d capital_ads_dev -f database/verificar-restricoes.sql
+--   psql -d gestfin_dev -f database/verificar-restricoes.sql
 --
 -- Não altera dado algum: tudo roda dentro de uma transação desfeita ao final.
 -- =============================================================================

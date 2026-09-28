@@ -5,7 +5,7 @@
 Sistema web de controle financeiro compartilhado por uma residência: lançamentos, compras parceladas, faturas de cartão por data de fechamento, contas recorrentes e dashboard mensal, sempre por mês de competência.
 
 ![Status](https://img.shields.io/badge/status-concluído-2EA043?style=flat-square)
-![Disciplina](https://img.shields.io/badge/Projeto_ADS_III-acadêmico-6E6E6E?style=flat-square)
+![Disciplina](https://img.shields.io/badge/Projeto_ADS-acadêmico-6E6E6E?style=flat-square)
 
 ![Node.js](https://img.shields.io/badge/Node_20-339933?style=flat-square&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express_4-000000?style=flat-square&logo=express&logoColor=white)
@@ -32,7 +32,7 @@ parametrizado, sem ORM**, e o esquema do banco é versionado em migrações
 idempotentes. A interface é Angular 17 com componentes autônomos, pensada para o
 celular.
 
-Projeto individual da disciplina **Projeto ADS III**, no Centro Universitário
+Projeto individual da disciplina **Projeto ADS**, no Centro Universitário
 UniGoiás.
 
 ## Funcionalidades
@@ -120,7 +120,7 @@ psql -h localhost -p 5433 -l
 ### 3. Criar o banco
 
 ```bash
-createdb -h localhost -p 5433 capital_ads_dev
+createdb -h localhost -p 5433 gestfin_dev
 ```
 
 ### 4. Configurar as variáveis de ambiente
@@ -193,7 +193,7 @@ Arquivo `backend/.env`, a partir de [`.env.example`](./backend/.env.example):
 | Variável | Padrão local | Descrição |
 |---|---|---|
 | `PORT` | `3600` | Porta da API |
-| `DATABASE_URL` | `postgresql://localhost:5433/capital_ads_dev` | Conexão com o banco |
+| `DATABASE_URL` | `postgresql://localhost:5433/gestfin_dev` | Conexão com o banco |
 | `COOKIE_SECRET` | valor de desenvolvimento | Segredo que assina os cookies de sessão |
 | `NODE_ENV` | `development` | Ambiente de execução |
 | `CORS_ORIGIN` | `http://localhost:4300` | Origem autorizada em desenvolvimento |
@@ -240,11 +240,11 @@ Eles usam um banco separado do de desenvolvimento, porque limpam as tabelas entr
 os casos:
 
 ```bash
-createdb -h localhost -p 5433 capital_ads_test
+createdb -h localhost -p 5433 gestfin_test
 npm run test:integration
 ```
 
-⚠️ **Nunca aponte a suíte de integração para o `capital_ads_dev`** — ela apaga as
+⚠️ **Nunca aponte a suíte de integração para o `gestfin_dev`** — ela apaga as
 tabelas entre os casos e você perderia os lançamentos de trabalho.
 
 ## API

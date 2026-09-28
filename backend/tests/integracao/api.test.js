@@ -7,7 +7,7 @@
  * dados de verdade.
  *
  * Pré-requisito:
- *   createdb -h localhost -p 5433 capital_ads_test
+ *   createdb -h localhost -p 5433 gestfin_test
  *   (as migrações são aplicadas por database/run-migrations.js)
  *
  * Execução:
@@ -15,7 +15,7 @@
  */
 
 process.env.DATABASE_URL =
-  process.env.TEST_DATABASE_URL || 'postgresql://localhost:5433/capital_ads_test';
+  process.env.TEST_DATABASE_URL || 'postgresql://localhost:5433/gestfin_test';
 process.env.NODE_ENV = 'test';
 process.env.COOKIE_SECRET = 'segredo-de-teste';
 // A suíte dispara centenas de requisições do mesmo endereço em poucos segundos.
@@ -106,7 +106,7 @@ describe('Acesso e sessão', () => {
 
     const certo = await anonimo.post('/api/auth/unlock', { pin: '4721' });
     assert.equal(certo.status, 200);
-    assert.ok(anonimo.cookies.has('capital_destravado'));
+    assert.ok(anonimo.cookies.has('gestfin_destravado'));
   });
 
   test('CTI02 – lista de perfis exige o acesso destravado', async () => {

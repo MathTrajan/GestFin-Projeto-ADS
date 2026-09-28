@@ -61,7 +61,7 @@ const databaseUrl = process.env.DATABASE_URL || conexaoDoArquivoEnv();
 if (!databaseUrl) {
   console.error('ERRO: conexão com o banco não definida.');
   console.error('Defina DATABASE_URL em backend/.env ou no ambiente. Exemplo:');
-  console.error('  DATABASE_URL="postgresql://localhost:5433/capital_ads_dev" node database/run-migrations.js');
+  console.error('  DATABASE_URL="postgresql://localhost:5433/gestfin_dev" node database/run-migrations.js');
   process.exit(1);
 }
 
